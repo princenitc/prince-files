@@ -1,4 +1,4 @@
-//for sorting in rhe descending order change the sign in max_heapify.
+//for sorting in rhe descending order change the sign in max_heapify.......
 #include<stdio.h>
 #include<stdlib.h>
 void swap(int *a,int *b){
