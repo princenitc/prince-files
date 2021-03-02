@@ -1,3 +1,4 @@
+//for sorting in rhe descending order change the sign in max_heapify
 #include<stdio.h>
 #include<stdlib.h>
 void swap(int *a,int *b){
@@ -17,7 +18,7 @@ void max_heapify(int arr[],int n,int i){
         }
         if(largest != i){
                 swap(&arr[i],&arr[largest]);
-                max_heapify(arr,n,largest);
+                max_heapify(arr,n,largest);//recursive call to heapify the heap
         }
 }
 
@@ -27,8 +28,8 @@ void build_heap(int arr[],int n){
         max_heapify(arr,n,i);
     }
     for(int i=n-1;i>0;i--){
-        swap(&arr[0],&arr[i]);
-        max_heapify(arr,i,0);
+        swap(&arr[0],&arr[i]);//swapping a value with maximum and placing maximum at last
+        max_heapify(arr,i,0);//again heapifying with reduced heap size
     }
 }
 void print_heap(int arr[],int n){
